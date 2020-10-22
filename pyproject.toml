@@ -1,0 +1,10 @@
+[tool.poetry]
+name = "model-decorators"
+version = "1.0.0"
+description = "A collection of decorators for functions and classes that automate several aspects of model classes."
+authors = ["Julian Heise <jam.heise@gmail.com>"]
+
+[tool.poetry.dependencies]
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
