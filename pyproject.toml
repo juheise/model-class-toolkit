@@ -3,6 +3,25 @@ name = "model-decorators"
 version = "1.0.0"
 description = "A collection of decorators for functions and classes that automate several aspects of model classes."
 authors = ["Julian Heise <jam.heise@gmail.com>"]
+license = "MIT"
+readme = "readme.md"
+homepage = "https://github.com/juheise/model-class-toolkit"
+repository = "https://github.com/juheise/model-class-toolkit"
+keywords = ["model", "productivity", "decorator", "generator"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+include = [
+    "LICENSE",
+]
+
 
 [tool.poetry.dependencies]
 
