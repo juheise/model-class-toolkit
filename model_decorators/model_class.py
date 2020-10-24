@@ -15,9 +15,17 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 """
 from model_decorators.equals import auto_eq
 from model_decorators.object_representation import auto_repr
+from inspect import isclass
 
 
 def model_class(exclude_eq=None, exclude_repr=None, exclude=None):
+
+    # this is the case when the decorator was used without parenthesis
+    if isclass(exclude_eq):
+        cls = exclude_eq
+        exclude_eq = None
+    else:
+        cls = None
 
     if not exclude_eq:
         exclude_eq = list()
@@ -37,5 +45,8 @@ def model_class(exclude_eq=None, exclude_repr=None, exclude=None):
         auto_repr_wrapper(cls)
 
         return cls
+
+    if cls:
+        return wrap(cls)
 
     return wrap
